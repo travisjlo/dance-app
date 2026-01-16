@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pair & Events App</title>
+  <link rel="manifest" href="/dance-app/manifest.json">
+  <meta name="theme-color" content="#4f46e5"/>
+  <!-- iOS important tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="/dance-app/icons/icon-192.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>Follow @Travis.phx on instagram for more</p>
+  <div class="buttons">
+    <a href="jack-n-jill.html" class="big-btn">🎲 Jack-n-Jill Simulator</a>
+    <a href="dance-cal.html" class="big-btn">🎉 See Upcoming Country Dance Conventions</a>
+  </div>
+
+  <p class="install-hint">Tip for iPhone: Tap Share → Add to Home Screen for best experience!</p>
+
+  <script src="app.js"></script>
+  <script>
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
