@@ -1,6 +1,6 @@
 {
-  "name": "Pair & Events App",
-  "short_name": "PairEvents",
+  "name": "DanceApp",
+  "short_name": "Danceapp",
   "description": "Random pair generator + fun events",
   "start_url": "/dance-app",
   "scope": "/dance-app",
